@@ -1,0 +1,294 @@
+<html>
+<!-- user story 1. When user chooses to join challenge, the onboarding dialog modal is triggered to open onclick of the join button.  -->
+<!--  user story 2. When user submits onboard form, they will receive a confirmation that the form was submitted with an overview of the data they submitted  
+O: div id="modal-body" 
+I: form id="signup"
+C: if name or email is empty
+E 
+-->
+<!-- user story 3. Based on the user responses, they will receive a list of 51 things they can do in 51 days to improve their financial health -->
+
+
+
+
+
+  <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- font-awesome css https://fontawesome.com/account/cdn -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 4.5rem;
+  background-color: #89C4F4;
+  font-family: 'Montserrat Alternates', sans-serif; 
+  background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
+  margin: 0;
+  background-repeat: repeat-y;
+}
+
+.jumbotron {
+  padding: 50px;
+}
+
+/* label {
+  width: 100px;
+} */
+
+/* input {
+  width: 250px;
+} */
+  </style>
+        
+<!-- TITLE -->
+ <title>51 Day Challenge</title>
+  </head>
+  <body>
+<!-- JUMBOTRON START-->
+<div class="jumbotron">
+  <h1 class="display-4">51 Day Challenge</h1>
+
+<!-- REASONS TO JOIN -->
+<p class="">
+<i class="fa fa-book" aria-hidden="true"></i> increase your financial literacy</p>
+<p class="">
+<i class="fa fa-medkit" aria-hidden="true"></i> enhance your well-being</p>
+<p class="">
+<i class="fas fa-coins"></i> grow your money </p>
+  <hr class="my-4">
+
+<!-- JOIN BUTTON/MODAL TRIGGER -->
+<button 
+class="btn btn-primary btn-block" type="button"
+data-toggle="modal"
+data-target="#myModal"
+ >START NOW</button>
+</div>
+<!-- JUMBOTRON END-->
+
+
+<!-- MODAL START -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">51 Day Challenge Signup</h4>
+      </div>
+      <div class="modal-body">
+<!--  One class="modal-split" for each step in the form-->
+    <div class="modal-split">
+		1. Do you currently have $500?
+<br>
+<form id="regForm" name="">
+    <label class="radio-inline">
+      <input type="radio" name="Has $500?" checked>Yes
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="Has $500?">No
+    </label>
+  </div>
+
+
+		<div class="modal-split">
+		2. Do you currently have income?
+    <br>
+      <label class="radio-inline">
+        <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">No
+      </label>
+
+  </form>
+    </div>
+		<div class="modal-split">
+		3. Do you currently have savings?
+      <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+		</div>	
+		<div class="modal-split">
+		4. Do you have a bank account?
+      <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+		</div>
+    <div class="modal-split">
+		5. Do you have high interest debt?
+    <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+     
+		</div>
+    <div class="modal-split">
+		6. Do you know your credit score?
+    <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+		</div>
+    <div class="modal-split">
+		7. Do you have a monthly budget?
+    <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+		</div>
+    <div class="modal-split">
+		8. Do you have a side hustle?
+        <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+		</div>
+    <div class="modal-split">
+		9. Do you have a business idea?
+        <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+		</div>
+    <div class="modal-split">
+		10. Do you have a business plan?
+        <br>
+      <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="optradio">No
+      </label>
+     
+		</div>
+    <div class="modal-split">
+		<label>First Name</label>
+    <input 
+      type="text" 
+      placeholder="enter your first name">
+      <br>
+		<label>Last Name</label>
+    <input 
+      type="text" 
+      placeholder="enter your last name">
+      <br>
+		<label>Email Address</label>
+    <input 
+      type="text" 
+      placeholder="enter your email address">
+      <!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:40px;">
+  <span class="step"></span>
+  <span class="step"></span>
+  <span class="step"></span>
+  <span class="step"></span>
+</div>
+ </form>
+		</div>
+      </div>
+
+      <div class="modal-footer">
+ <!--Nothing Goes Here but is needed! -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL END -->
+
+
+
+<!-- MODAL JS START-->
+<!--  https://codepen.io/Ayn_/pen/vmVKZV
+ -->
+<script src="modal1.js"></script>
+
+
+<!-- MULTI PAGE MODAL FORM START-->
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_form_steps -->
+<!-- <script src="steps.js"></script>
+ -->
+</body>
+
+
+
+
+<!-- accessibility resources -->
+<!-- http://colorsafe.co/
+
+ https://reciteme.com/uploads/articles/accessible_fonts_guide.pdf
+ -->  
+
+ <!-- JavaScript resources -->
+<!-- https://www.willmaster.com/library/web-development/replace-div-content.php 
+
+https://getbootstrap.com/docs/3.4/javascript/
+
+
+https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/js/calendar-button.js
+
+-->
+
+<!-- css resources -->
+<!-- 
+  https://redstapler.co/4-ways-to-center-div-css/
+ 
+ https://www.lambdatest.com/blog/advanced-css-techniques-2021/
+ 
+ https://www.bitdegree.org/learn/css-list-style
+
+ https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/
+
+ https://codepen.io/Ayn_/pen/vmVKZV
+
+ https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_radio_inline&stacked=h
+ -->
+https://superdevresources.com/glassmorphism-ui-css/
+
+ </html>

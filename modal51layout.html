@@ -1,0 +1,281 @@
+<html>
+  <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- font-awesome css https://fontawesome.com/account/cdn -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 4.5rem;
+  background-color: #89C4F4;
+  font-family: 'Montserrat Alternates', sans-serif; 
+  background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
+  margin: 0;
+  background-repeat: repeat-y;
+}
+
+.jumbotron {
+  padding: 50px;
+}
+
+label {
+  width: 100px;
+}
+
+input {
+  width: 250px;
+}
+  </style>
+        
+<!-- TITLE -->
+ <title>Color Accessible Sign up Form Hello, world!</title>
+  </head>
+  <body>
+<!-- JUMBOTRON START-->
+<div class="jumbotron">
+  <h1 class="display-4">51 Day Challenge</h1>
+
+<!-- REASONS TO JOIN -->
+<p class="">
+<i class="fa fa-book" aria-hidden="true"></i> increase your financial literacy</p>
+<p class="">
+<i class="fa fa-medkit" aria-hidden="true"></i> enhance your well-being</p>
+<p class="">
+<i class="fas fa-coins"></i> grow your money </p>
+  <hr class="my-4">
+
+<!-- JOIN BUTTON/MODAL TRIGGER -->
+<button 
+class="btn btn-primary btn-block" type="button"
+data-toggle="modal"
+data-target="#myModal"
+ >START NOW</button>
+</div>
+<!-- JUMBOTRON END-->
+
+
+<!-- MODAL START -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">51 Day Challenge Signup</h4>
+      </div>
+      <div class="modal-body">
+    <div class="modal-split">
+		1. Do you currently have $500?</div>
+		<div class="modal-split">
+		2. Do you currently have income?</div>
+		<div class="modal-split">
+		3. Do you currently have savings?
+		</div>	
+		<div class="modal-split">
+		4. Do you have a bank account?
+		</div>
+    <div class="modal-split">
+		5. Do you have high interest debt?
+		</div>
+    <div class="modal-split">
+		6. Do you know your credit score?
+		</div>
+    <div class="modal-split">
+		7. Do you have a monthly budget?
+		</div>
+    <div class="modal-split">
+		8. Do you have a side hustle?
+		</div>
+    <div class="modal-split">
+		9. Do you have a business idea?
+		</div>
+    <div class="modal-split">
+		10. Do you have a business plan?
+		</div>
+    <div class="modal-split">
+		<label>First Name</label>
+    <input 
+      type="text" 
+      placeholder="enter your first name">
+      <br>
+		<label>Last Name</label>
+    <input 
+      type="text" 
+      placeholder="enter your last name">
+      <br>
+		<label>Email Address</label>
+    <input 
+      type="text" 
+      placeholder="enter your email address">
+
+		</div>
+      </div>
+
+      <div class="modal-footer">
+ <!--Nothing Goes Here but is needed! -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL END -->
+
+
+
+
+
+
+<!-- MODAL JS START-->
+<script>
+$(document).ready(function() {
+  prep_modal();
+});
+
+function prep_modal()
+{
+  $(".modal").each(function() {
+
+  var element = this;
+	var pages = $(this).find('.modal-split');
+
+  if (pages.length != 0)
+  {
+    	pages.hide();
+    	pages.eq(0).show();
+
+    	var b_button = document.createElement("button");
+                b_button.setAttribute("type","button");
+          			b_button.setAttribute("class","btn btn-primary");
+          			b_button.setAttribute("style","display: none;");
+          			b_button.innerHTML = "Back";
+
+    	var n_button = document.createElement("button");
+                n_button.setAttribute("type","button");
+          			n_button.setAttribute("class","btn btn-primary");
+          			n_button.innerHTML = "Next";
+
+    	$(this).find('.modal-footer').append(b_button).append(n_button);
+
+
+    	var page_track = 0;
+
+    	$(n_button).click(function() {
+        
+        this.blur();
+
+    		if(page_track == 0)
+    		{
+    			$(b_button).show();
+    		}
+
+    		if(page_track == pages.length-2)
+    		{
+    			$(n_button).text("Submit");
+    		}
+
+        if(page_track == pages.length-1)
+        {
+          $(element).find("form").submit();
+        }
+
+    		if(page_track < pages.length-1)
+    		{
+    			page_track++;
+
+    			pages.hide();
+    			pages.eq(page_track).show();
+    		}
+
+
+    	});
+
+    	$(b_button).click(function() {
+
+    		if(page_track == 1)
+    		{
+    			$(b_button).hide();
+    		}
+
+    		if(page_track == pages.length-1)
+    		{
+    			$(n_button).text("Next");
+    		}
+
+    		if(page_track > 0)
+    		{
+    			page_track--;
+
+    			pages.hide();
+    			pages.eq(page_track).show();
+    		}
+
+
+    	});
+
+  }
+
+  });
+}
+</script>
+<!-- MODAL JS END -->
+
+
+
+</body>
+
+
+
+
+<!-- accessibility resources -->
+<!-- http://colorsafe.co/
+
+ https://reciteme.com/uploads/articles/accessible_fonts_guide.pdf
+ -->  
+
+ <!-- JavaScript resources -->
+<!-- https://www.willmaster.com/library/web-development/replace-div-content.php 
+
+https://getbootstrap.com/docs/3.4/javascript/
+
+
+https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/js/calendar-button.js
+
+-->
+
+<!-- css resources -->
+<!-- 
+  https://redstapler.co/4-ways-to-center-div-css/
+ 
+ https://www.lambdatest.com/blog/advanced-css-techniques-2021/
+ 
+ https://www.bitdegree.org/learn/css-list-style
+
+ https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/
+
+ https://codepen.io/Ayn_/pen/vmVKZV
+ -->
+
+
+ </html>

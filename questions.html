@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
+ 
+  </head>
+  <body>
+
+
+
+<!-- 
+75/15/10
+spending/investing/saving
+ -->
+  <div class="grid-container">
+  <div class="grid-item">
+        <!-- menu function -->
+<div class="container" onclick="menuFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+        <header>
+      <h1 class="name">$500 Investing Challenge</h1>
+    </header>
+
+<!-- social wellness calculator -->
+  </div>
+  <ol>
+<li>Has lack of access to transportation prevented you from getting medical attention and preventative care?
+</li>
+</ol>
+
+
+  </div>
+
+  </div>
+<!-- spending calculator -->
+  <div class="grid-item">
+    <label>What is your weekly income?</label><input type="text" id="weeklyincome" placeholder="$1/week"><button onclick="getSavingsForm(weeklyincome)">get savings formula</button>
+  </div>
+  <div class="grid-item" id="formResults"></div>
+  </div>
+</div>
+
+    <form id="invest">
+
+<ol style="text-align: justify;">
+      <!-- Question 1 -->
+      
+<li>Do you have $500?
+      <label>yes</label>
+      <input type="radio" id="yes" value="yes" name="$500">
+      
+      <label>no</label>
+      <input type="radio" id="no" value="no" name="$500">
+  </li>
+
+
+      <!-- Question 2 -->
+
+            <li>Do you have savings? 
+                      <label>yes</label>
+        <input type="radio" id="yes" value="yes" name="SAVINGS">
+
+
+        <label>no</label>
+        
+      <input type="radio" id="no" value="no" name="SAVINGS">
+        </li>
+
+      <!-- Question 3 -->
+
+      <li>Do you have an income?
+      <label>yes</label>
+
+      <input type="radio" id="yes" value="yes" name="INCOME" >
+      
+      <label>no</label>
+      
+      <input type="radio" id="no" value="no" name="INCOME">
+      </li>
+
+            <!-- Question 4 -->
+
+      <li>Do you have a bank account?
+              <label>yes</label>
+              <input type="radio" id="yes" name="BANK ACCOUNT" value="yes"><label>no</label><input type="radio" name="BANK ACCOUNT" id="no" value="no">
+      </li>
+
+            <!-- Question 5 -->
+
+                  <li>Do you have high interest debt?
+                          <label>yes</label>
+                          <input type="radio" id="yes" name="HIGH INTEREST DEBT" value="yes">
+                          
+                          <label>no</label>
+                          <input type="radio" name="HIGH INTEREST DEBT" id="no" value="no">
+                  </li>
+
+      <!-- Question 6 -->
+
+      <li>Do you know your credit score?
+                                <label>yes</label><input type="radio"
+                                name="CREDIT SCORE KNOWN" id="yes" value="yes"><label>no</label><input type="radio" 
+                                name="CREDIT SCORE KNOWN"
+                                id="no" value="no">
+      </li>
+
+      
+      <!-- Question 7 -->
+
+      <li>Do you have an idea or solution?
+                                <label>yes</label>
+                                <input type="radio"
+                                name="IDEA+SOLUTION" id="yes" value="yes"><label>no</label><input type="radio"
+                                name="IDEA+SOLUTION" id="no" value="no">
+        </li>
+
+            <!-- Question 8 -->
+
+        <li>Have you found a side hustle/passion that pays you?
+                                  <label>yes</label>
+                                  <input type="radio" 
+                                  name="HUSTLE+PASSION" id="yes" value="yes"><label>no</label><input type="radio"
+                                  name="HUSTLE+PASSION" id="no" value="no">
+        </li>
+
+              <!-- Question 9 -->
+
+      <li>Do you have time to study from 30 minutes to 4 hours a day?
+                                <label>yes</label>
+                                <input type="radio"
+                                name="STUDY+TIME" id="yes" value="yes">
+                                
+                                <label>no</label>
+                                <input type="radio" 
+                                name="STUDY+TIME" id="no" value="no"></li> 
+      <!-- Question 10 -->
+       <li>Do you want to learn how to grow money with stocks and crypto?                         <label>yes</label>
+       <input type="radio" name="EARN CRYPTO" id="yes" value="yes">
+       
+       <label>no</label><input type="radio" name="EARN CRYPTO" id="no" value="no"></li>
+</ol>
+
+<!-- submit button -->
+<button type="button" name="submit" onclick="displayRadioValue()">Submit</button> 
+
+
+<!-- clear button -->
+<button type="button" onclick="clearDisplayValues(result)">Clear</button>
+
+
+
+
+
+
+
+<div id="box">
+  <button>Change Color</button>
+  <div id="result">
+
+  </div>
+</div>
+
+Yes <input type="radio">
+Supermarket blockchain metaverse
+user can see supply in real-time and track their transaction choices via an in store shopper. 
+2. Metaverse Cafe - mailing center / podcast studio / assisted living. 
+
+
+
+
+
+
+
+
+          </td>
+        </tr>
+        <tr>
+            <span class="">Do you have an income?</span></td>
+            <tr>
+              <td>yes</td> <td>no</td>
+              </tr>
+          </tr>
+
+
+          <tr> 
+            <td>
+                <label>Yes</label><input type="radio" value="yes" name="Income" id="yes"></button>
+            </td>
+            <td>
+              <label>No</label><input type="radio" value="no" name="Income" id="no">
+              </td>
+          </tr>
+
+              <tr>
+            <td>
+              <!-- question -->
+              <label>Do you have savings?</label> 
+             </td>
+            </tr>
+            <tr>
+              <td><!-- answer 1-->     
+              
+              <label>Yes</label><input type="radio" value="yes" name="Savings" id="yes">
+              </td>
+              
+               <td><!-- answer 2-->     <label>No</label><input type="radio" value="no" name="Savings" id="yes"></td>
+            </tr>
+
+
+
+          <tr>
+            <td>
+              <!-- question -->
+              </td>
+            </tr>
+            <tr>
+              <td><!-- option --></td>
+            </tr>
+
+
+        </table>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+    <label>No</label><input type="radio" value="no" name="Savings" id="yes">
+
+<!-- <input type="button" value="submit" onclick="displaySavingsValue()">
+
+<div id="result2">
+
+  </div> -->
+
+<br>
+<label>Do you have high interest debt?</label>
+<label>Yes</label>
+<input type="radio" name="High Interest Debt" id="yes" value="yes">
+<label>No</label>
+  <input type="radio" name="High Interest Debt" id="no" value="no">
+<br>
+
+
+<!-- <input type="button" value="submit" onclick="displayHighdebtValue()"> -->
+
+<!-- submit button -->
+<button type="button" name="submit" onclick="displayRadioValue()">Submit</button> 
+
+
+<!-- clear button -->
+<button type="button" onclick="clearDisplayValues(result)">Clear</button>
+
+
+
+
+  <!-- input triggering dom changes -->
+
+
+
+<!-- blue value -->
+<input type="radio" name="yes" id="yes" onclick="changeColor('blue')" class=">Blue</button>
+
+<!-- green value -->
+<input type="radio"  name="no" id="no" onclick=
+"changeColor('green')" class="green">Green</button>
+
+<!-- white -->
+<input type="radio" name="other" id="other" onclick="changeColor('white')" class="white">Orange</button>
+
+
+
+
+</form>
+ </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
