@@ -1,5 +1,7 @@
 <html>
-<!-- user story 1. When user chooses to join challenge, the onboarding dialog modal is triggered to open onclick of the join button.  -->
+<!-- user story 1. When user chooses to join challenge, the onboarding dialog modal is triggered to open onclick of the join button. ✅ -->
+
+
 <!--  user story 2. When user submits onboard form, they will receive a confirmation that the form was submitted with an overview of the data they submitted  
 O: div id="modal-body" 
 I: form id="signup"
@@ -40,6 +42,21 @@ E
   margin: 0;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer,
+.push {
+  height: 50px;
+  text-align: justify;
+}
+
 body {
   padding: 4.5rem;
   background-color: #89C4F4;
@@ -49,6 +66,9 @@ body {
   background-repeat: repeat-y;
 }
 
+
+  
+  
 .jumbotron {
   padding: 50px;
 }
@@ -63,12 +83,12 @@ body {
   </style>
         
 <!-- TITLE -->
- <title>51 Day Challenge</title>
+ <title>11 Day Financial Success Challenge</title>
   </head>
   <body>
 <!-- JUMBOTRON START-->
 <div class="jumbotron">
-  <h1 class="display-4">51 Day Challenge</h1>
+  <h1 class="display-4">11 Day Financial Success Challenge</h1>
 
 <!-- REASONS TO JOIN -->
 <p class="">
@@ -80,11 +100,14 @@ body {
   <hr class="my-4">
 
 <!-- JOIN BUTTON/MODAL TRIGGER -->
+  
 <button 
 class="btn btn-primary btn-block" type="button"
 data-toggle="modal"
 data-target="#myModal"
  >START NOW</button>
+  <p></p>
+   <i><sub>UNDER CONSTRUCTION<sup>*</sup></sub></i>  
 </div>
 <!-- JUMBOTRON END-->
 
@@ -96,19 +119,19 @@ data-target="#myModal"
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">51 Day Challenge Signup</h4>
+        <h4 class="modal-title" id="myModalLabel">11 Day Challenge Signup</h4>
       </div>
       <div class="modal-body">
 <!--  One class="modal-split" for each step in the form-->
     <div class="modal-split">
 		1. Do you currently have $500?
 <br>
-<form id="regForm" name="">
+<form id="regForm" name="" action="https://formspree.io/f/xgedlozj" method="post">
     <label class="radio-inline">
       <input type="radio" name="Has $500?" checked>Yes
     </label>
     <label class="radio-inline">
-      <input type="radio" name="Has $500?">No
+      <input type="radio" name="Has $500?" id="txtName">No
     </label>
   </div>
 
@@ -120,7 +143,7 @@ data-target="#myModal"
         <input type="radio" name="optradio" checked>Yes
       </label>
       <label class="radio-inline">
-        <input type="radio" name="optradio">No
+        <input type="radio" name="optradio" id="txtIncome">No
       </label>
 
   </form>
@@ -254,41 +277,18 @@ data-target="#myModal"
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_form_steps -->
 <!-- <script src="steps.js"></script>
  -->
+
+    <footer class="footer">
+  <i>*Note - this web application is for entertainment purposes only. Our question prompts are not financial advice. The purpose is to help identify where you are at in your financial wellness journey.</i>
+      
+</footer>
 </body>
 
 
 
 
-<!-- accessibility resources -->
-<!-- http://colorsafe.co/
 
- https://reciteme.com/uploads/articles/accessible_fonts_guide.pdf
- -->  
-
- <!-- JavaScript resources -->
-<!-- https://www.willmaster.com/library/web-development/replace-div-content.php 
-
-https://getbootstrap.com/docs/3.4/javascript/
-
-
-https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/js/calendar-button.js
-
--->
-
-<!-- css resources -->
-<!-- 
-  https://redstapler.co/4-ways-to-center-div-css/
  
- https://www.lambdatest.com/blog/advanced-css-techniques-2021/
- 
- https://www.bitdegree.org/learn/css-list-style
 
- https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/
-
- https://codepen.io/Ayn_/pen/vmVKZV
-
- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_radio_inline&stacked=h
- -->
-https://superdevresources.com/glassmorphism-ui-css/
 
  </html>
